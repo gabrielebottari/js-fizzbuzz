@@ -10,3 +10,19 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 
+    MAIN
+*/
+
+h1 {
+    font-size: 5em;
+}
+
+.element {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    vertical-align: middle;  
+}

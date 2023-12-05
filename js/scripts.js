@@ -21,45 +21,51 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 
 */
 
-//div container nel DOM
+// Div container nel DOM
 const container = document.createElement("div");
+// Aggiungo classi
+container.classList.add("row", "container-fluid", "px-5", "py-2", "mx-auto" );
 
 // Aggiungo il container al corpo del documento
 document.body.append(container);
 
-// ciclo for con numeri da 1 a 100 con avanzamento di 1
+// Ciclo for con numeri da 1 a 100 con avanzamento di 1
 for (let number = 1; number <= 100; number++) {
 
-    //div elemento creato
+    // Div elemento creato
     const element = document.createElement('div');
     console.log('element', element, typeof element);
 
-    //se divisibile per 3 e 5 dando resto 0 come prima condizione stampa fizzbuzz
+    // Se divisibile per 3 e 5 dando resto 0 come prima condizione stampa fizzbuzz
     if (number % 3 == 0 && number % 5 == 0) {
         console.log("FizzBuzz");
-        //inserimento nell'elemento
+        // Inserimento nell'elemento e aggiungo classi
+        element.classList.add("element", "text-center", "m-2", "fs-3", "bg-danger");
         element.append("FizzBuzz"); 
     
-    //se divisibile per 3 dando resto 0 stampa fizz
+    // Se divisibile per 3 dando resto 0 stampa fizz
     } else if (number % 3 == 0) {
         console.log("Fizz");
-        //inserimento nell'elemento
+        // Inserimento nell'elemento e aggiungo classi
+        element.classList.add("element", "text-center", "m-2", "fs-3", "bg-success");
         element.append("Fizz");
 
-    //se divisibile per 5 dando resto 0 stampa buzz
+    // Se divisibile per 5 dando resto 0 stampa buzz
     } else if (number % 5 == 0) {
         console.log("Buzz");
-        //inserimento nell'elemento
-        element.append("Buzz"); //inserimento nell'elemento
+        // Inserimento nell'elemento e aggiungo classi
+        element.classList.add("element", "text-center", "m-2", "fs-3", "bg-warning");
+        element.append("Buzz");
 
-    //altrimenti stampa in numero
+    // Altrimenti stampa in numero
     } else {
         console.log(number);
-        //inserimento nell'elemento
+        // Inserimento nell'elemento e aggiungo classi
+        element.classList.add("element", "text-center", "m-2", "fs-3", "bg-info");
         element.append(number)
     }
 
-    //inserimento elemento nel container
+    // Inserimento elemento nel container
     container.append(element);
 
 }
