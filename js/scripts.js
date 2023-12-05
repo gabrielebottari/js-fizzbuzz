@@ -21,13 +21,9 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 
 */
 
-// Div container nel DOM
-const container = document.createElement("div");
+const row = document.querySelector('.row');
 // Aggiungo classi
-container.classList.add("row", "container-fluid", "px-5", "py-2", "mx-auto" );
-
-// Aggiungo il container al corpo del documento
-document.body.append(container);
+row.classList.add("row", "container-fluid", "px-5", "py-2", "mx-auto" );
 
 // Ciclo for con numeri da 1 a 100 con avanzamento di 1
 for (let number = 1; number <= 100; number++) {
@@ -66,6 +62,6 @@ for (let number = 1; number <= 100; number++) {
     }
 
     // Inserimento elemento nel container
-    container.append(element);
+    row.append(element);
 
 }
